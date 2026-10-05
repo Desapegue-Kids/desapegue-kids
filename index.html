@@ -293,20 +293,6 @@ cloud.auth.onAuthStateChange((event,session)=>{
   }).observe(clients,{childList:true,subtree:true});
 })();
 </script>
-  };
-  const oldRenderOrders=window.renderOrders;
-  if(typeof oldRenderOrders==='function'){
-    window.renderOrders=function(){oldRenderOrders();cleanOrderCustomer()};
-  }
-  const cleanClients=()=>{
-    document.querySelectorAll('#clientesContent tbody tr td:first-child').forEach(el=>{
-      if(typeof dec!=='function')return;
-      const d=dec(el.textContent);
-      if(d.v!==el.textContent)el.textContent=d.v||'Não informada';
-    });
-  };
-  const clients=document.getElementById('clientesContent');
-  if(clients)new MutationObserver(cleanClients).observe(clients,{childList:true,subtree:true});
-})();
-</script></body></html
+ 
+</body></html>
                      
