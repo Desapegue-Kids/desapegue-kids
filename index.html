@@ -309,21 +309,4 @@ cloud.auth.onAuthStateChange((event,session)=>{
   if(clients)new MutationObserver(cleanClients).observe(clients,{childList:true,subtree:true});
 })();
 </script></body></html
-                       <script>
-(function(){
-  const limpar=()=>{
-    document.querySelectorAll('#ordersList .product .meta').forEach(el=>{
-      const linhas=el.innerHTML.split('<br>');
-      const i=linhas.findIndex(x=>x.startsWith('Cliente: '));
-      if(i<0||typeof dec!=='function')return;
-      const d=dec(linhas[i].slice(9));
-      linhas[i]='Cliente: '+esc(d.v||'Não informada');
-      el.innerHTML=linhas.join('<br>');
-    });
-  };
-  const obs=new MutationObserver(limpar);
-  const alvo=document.getElementById('ordersList');
-  if(alvo)obs.observe(alvo,{childList:true,subtree:true});
-  setTimeout(limpar,500);
-})();
-</script>
+                     
