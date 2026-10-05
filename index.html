@@ -246,7 +246,7 @@ cloud.auth.onAuthStateChange((event,session)=>{
   const decodeCustomer=value=>{
     const s=String(value||'');
     if(!s.startsWith('[[DKADV]]'))return s;
-    try{return JSON.parse(s.slice(8)).v||'Não informada'}catch(e){return s}
+    try{return JSON.parse(s.slice(9)).v||'Não informada'}catch(e){return s}
   };
 
   const cleanOrderCustomer=()=>{
