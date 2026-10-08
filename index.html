@@ -294,5 +294,12 @@ cloud.auth.onAuthStateChange((event,session)=>{
 })();
 </script>
  
-</body></html>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const b=document.getElementById('newBtn');
+  if(b)b.onclick=()=>{if(typeof resetForm==='function')resetForm();if(typeof showTab==='function')showTab('cadastro');window.scrollTo({top:0,behavior:'smooth'})};
+  const tab=document.querySelector('[data-tab="cadastro"]');
+  if(tab)tab.onclick=()=>{if(typeof showTab==='function')showTab('cadastro')};
+});
+</script></body></html>
                      
